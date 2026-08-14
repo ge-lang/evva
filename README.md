@@ -66,6 +66,52 @@ Each product page provides a large product image, price, stock status, rating, d
 
 The request flow combines a short explanation of the advisory service with a structured contact form.
 
+### Customer, Cart and Orders
+
+#### Shopping Cart
+
+![EVVA shopping cart](docs/screenshots/EVVA_LinkedIn_14_Winkelwagen_1280x720.jpeg)
+
+The cart keeps selected products together, shows quantities and totals, and leads into the available checkout options.
+
+#### Order History
+
+![EVVA order history](docs/screenshots/EVVA_LinkedIn_13_Bestelgeschiedenis_1280x720.jpeg)
+
+Signed-in customers can review previous orders and their totals from the account area.
+
+### Administration
+
+#### Dashboard
+
+![EVVA admin dashboard](docs/screenshots/EVVA_LinkedIn_07_Admin_Dashboard.jpeg)
+
+The dashboard gives administrators a compact overview of orders, users, roles, products, brands, categories and comments.
+
+#### Product Management
+
+![EVVA admin products](docs/screenshots/EVVA_LinkedIn_08_Admin_Products.jpeg)
+
+The product list supports catalogue administration, including product images, categories, brands, descriptions, prices and quick actions.
+
+#### Services Management
+
+![EVVA admin services](docs/screenshots/EVVA_LinkedIn_09_Admin_Diensten.jpeg)
+
+Services can be maintained with their titles and visual media used across the public website.
+
+#### Roles and Access
+
+![EVVA admin roles](docs/screenshots/EVVA_LinkedIn_11_Admin_Roles.jpeg)
+
+The roles view provides a simple foundation for separating administrator, cashier and customer permissions.
+
+#### Product Management Detail
+
+![EVVA product management detail](docs/screenshots/EVVA_LinkedIn_15_Admin_Productbeheer_1280x720.jpeg)
+
+The refreshed catalogue uses current product names, descriptions and imagery for the modern EVVA shop experience.
+
 ## Technology
 
 - **Backend:** PHP 8.1 with session-based authentication and server-side workflows

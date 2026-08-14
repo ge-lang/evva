@@ -1,67 +1,117 @@
-# EVVA — Corporate Web Platform & Smart Shop
+# EVVA
 
-A PHP/MySQL corporate website with service pages, customer and partner onboarding, a smart shop, authentication, orders, and an administrative backoffice. This is a modernized version of an older training project.
+**Corporate website, service platform and smart shop built with PHP and MySQL.**
 
-## Live Demo
+EVVA brings telecom, internet, energy, smart-home and technology products together in one clear digital experience. The project includes a public website, customer onboarding, a product catalogue, authentication, orders and an administrator backoffice.
 
-[Open the EVVA website](https://evasive-skier-ended.ngrok-free.dev/home.php)
+[![Live demo](https://img.shields.io/badge/live_demo-EVVA-8f24e8)](https://evasive-skier-ended.ngrok-free.dev/home.php)
+[![PHP](https://img.shields.io/badge/PHP-8.1-777bb4)](https://www.php.net/)
+[![MySQL](https://img.shields.io/badge/MySQL-8-4479a1)](https://www.mysql.com/)
+[![Docker](https://img.shields.io/badge/Docker-Compose-2496ed)](https://docs.docker.com/compose/)
 
-The demo is served through a temporary ngrok tunnel and may be unavailable when the local Docker environment is stopped.
+> The live demo uses a temporary ngrok tunnel and is available only while the local Docker environment is running.
 
----
+## Product Story
 
-## 🛠️ Tech Stack & Architecture
+EVVA helps visitors compare practical solutions, request advice and shop for modern devices through one consistent interface.
 
-* **Backend:** PHP 8.1 with session-based authentication and server-side workflows
-* **Database:** MySQL 8 with the schema in `sint.sql`
-* **Frontend:** HTML5, CSS3, JavaScript, Bootstrap and Owl Carousel
-* **Payments:** PayPal REST API in sandbox mode
-* **Runtime:** Docker Compose with Apache, PHP and MySQL
+- Clear service discovery for telecom, internet, energy, solar panels and smart home
+- Dutch and English content using the `lang` query parameter
+- Modern product catalogue with categories, brands and product details
+- Shopping cart, checkout and order history
+- Customer and partner onboarding flows
+- Admin tools for managing the catalogue and website content
 
----
+## Screenshots
 
-## 📊 Core Features & System Modules
+### Public Experience
 
-### 1. Corporate website and onboarding
-* Service pages for telecom, internet, energy, solar panels, smart home and smart shop solutions.
-* Customer and partner request forms in `klant_worden.php` and `partner_worden.php`.
-* Dutch and English content via the `lang` query parameter.
+#### Homepage
 
-### 2. Smart shop
-* Product catalog with category and brand filtering.
-* Product details, reviews, shopping cart and checkout flow.
-* Customer order history in `my-orders.php`.
+![EVVA homepage](docs/screenshots/EVVA_LinkedIn_01_Homepage.jpeg)
 
-### 3. Administration
-* The `/admin` area manages users, roles, services, categories, brands, products, team members, comments and orders.
-* The database schema contains the relationships for users, products, services, categories, orders and order items.
+The homepage introduces EVVA through a full-width visual hero, clear navigation and a direct route into smart-home services.
 
-## Local setup with Docker
+#### Services Overview
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/ge-lang/evva.git
-   cd evva
-   ```
+![EVVA services](docs/screenshots/EVVA_LinkedIn_02_Diensten.jpeg)
 
-2. Create the environment file:
-   ```bash
-   cp .env.example .env
-   ```
+The services overview presents six visual areas: telecom, internet, energy, solar panels, smart home and smart shop.
 
-3. Add the PayPal sandbox credentials to `.env`, then start the project:
-   ```bash
-   docker compose up -d --build
-   ```
+#### Smart Home Detail
 
-4. Open the site at [http://localhost:8080/home.php](http://localhost:8080/home.php).
+![EVVA smart home detail](docs/screenshots/EVVA_LinkedIn_03_SmartHome_Detail.jpeg)
 
-The database is initialized from `sint.sql`. phpMyAdmin is available at [http://localhost:8081](http://localhost:8081).
+Service detail pages combine a focused value proposition, visual storytelling and a consultation call to action.
 
-## Repository history
+### Smart Shop
 
-This repository contains the current EVVA version. The original training project is kept separately as a private archive.
+#### Product Catalogue
 
-## Security notes
+![EVVA product catalogue](docs/screenshots/EVVA_LinkedIn_04_Productcatalogus.jpeg)
 
-Never commit `.env` or real PayPal credentials. Use `.env.example` as a template and configure secrets only in the local environment or deployment settings.
+The catalogue supports category navigation, product cards, pricing, ratings and add-to-cart actions.
+
+#### Product Detail
+
+![EVVA product detail](docs/screenshots/EVVA_LinkedIn_05_Productdetail.jpeg)
+
+Each product page provides a large product image, price, stock status, rating, description and purchase action.
+
+### Customer Onboarding
+
+#### Become a Customer
+
+![EVVA customer request](docs/screenshots/EVVA_LinkedIn_06_Klantaanvraag.jpeg)
+
+The request flow combines a short explanation of the advisory service with a structured contact form.
+
+## Technology
+
+- **Backend:** PHP 8.1 with session-based authentication and server-side workflows
+- **Database:** MySQL 8, initialized from `sint.sql`
+- **Frontend:** HTML5, CSS3, JavaScript, Bootstrap, jQuery and Owl Carousel
+- **Payments:** PayPal REST API in sandbox mode
+- **Runtime:** Docker Compose with Apache, PHP and MySQL
+- **Admin:** CRUD workflows for users, roles, services, products, brands, categories, comments and orders
+
+## Run Locally
+
+Clone the repository and start the Docker environment:
+
+```bash
+git clone https://github.com/ge-lang/evva.git
+cd evva
+cp .env.example .env
+docker compose up -d --build
+```
+
+Open the application:
+
+- Website: <http://localhost:8080/home.php>
+- Admin area: <http://localhost:8080/admin>
+- phpMyAdmin: <http://localhost:8081>
+
+The database is initialized from `sint.sql`. PayPal credentials are optional while the rest of the site is being developed; add sandbox values to `.env` before testing checkout.
+
+## Repository Structure
+
+```text
+admin/        Administrator panel and uploaded media
+classes/      Shared model and database classes
+includes/     Layout, configuration, authentication and payments
+css/          Public stylesheets
+js/           Public JavaScript
+docs/         Project documentation and screenshots
+sint.sql      Database schema and catalogue seed data
+```
+
+## Security
+
+Never commit `.env`, PayPal secrets, database passwords or personal contact data. Use `.env.example` as the configuration template and keep credentials in local or deployment environment variables.
+
+This is a portfolio and educational project, not a production-ready commerce platform. A production deployment still requires a full security review, stronger password handling, CSRF protection, validation, updated dependencies, transactional payment verification and operational monitoring.
+
+## Project Status
+
+EVVA is the modernized version of an older training project. The original educational archive is preserved separately in [`ge-lang/sint`](https://github.com/ge-lang/sint).

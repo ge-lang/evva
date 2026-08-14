@@ -382,6 +382,12 @@ ALTER TABLE `orders`
 ALTER TABLE `order_items`
   ADD CONSTRAINT `order_items_ibfk_1` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`) ON DELETE CASCADE,
   ADD CONSTRAINT `order_items_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`);
+
+-- Keep the public catalog focused on the modern EVVA product set below.
+-- Old training records are removed after foreign-key constraints are created.
+DELETE FROM `comment` WHERE `product_id` NOT IN (46, 47, 48, 49, 50, 51, 52, 54, 55);
+DELETE FROM `order_items` WHERE `product_id` NOT IN (46, 47, 48, 49, 50, 51, 52, 54, 55);
+DELETE FROM `products` WHERE `id` NOT IN (46, 47, 48, 49, 50, 51, 52, 54, 55);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

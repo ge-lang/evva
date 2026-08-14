@@ -88,12 +88,6 @@ Signed-in customers can review previous orders and their totals from the account
 
 The dashboard gives administrators a compact overview of orders, users, roles, products, brands, categories and comments.
 
-#### Product Management
-
-![EVVA admin products](docs/screenshots/EVVA_LinkedIn_08_Admin_Products.jpeg)
-
-The product list supports catalogue administration, including product images, categories, brands, descriptions, prices and quick actions.
-
 #### Services Management
 
 ![EVVA admin services](docs/screenshots/EVVA_LinkedIn_09_Admin_Diensten.jpeg)

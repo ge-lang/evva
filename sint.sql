@@ -176,12 +176,8 @@ CREATE TABLE IF NOT EXISTS `orders` (
 -- Gegevens worden geëxporteerd voor tabel `orders`
 --
 
-INSERT INTO `orders` (`id`, `user_id`, `payment_id`, `payer_id`, `payment_total`) VALUES
-(20, 1, 'PAYID-L5DIG2Q7BX53217NR713251F', 'ZJHRBMM5JAM4A', 666666),
-(21, 1, 'PAYID-L5DIJGI6E1857141D0445748', 'ZJHRBMM5JAM4A', 978),
-(22, 1, 'PAYID-L5DIOTY3CF13824UB4406626', 'ZJHRBMM5JAM4A', 812),
-(23, 1, 'PAYID-L5DNUUQ8FJ4080113838211L', 'ZJHRBMM5JAM4A', 130),
-(24, 1, 'PAYID-L5DY6KI13J03792BW997642J', 'ZJHRBMM5JAM4A', 899);
+-- Historical orders are intentionally not seeded. The deployment dump does
+-- not contain demo users, so these old orders would violate the user FK.
 
 -- --------------------------------------------------------
 
@@ -204,12 +200,7 @@ CREATE TABLE IF NOT EXISTS `order_items` (
 -- Gegevens worden geëxporteerd voor tabel `order_items`
 --
 
-INSERT INTO `order_items` (`id`, `product_id`, `order_id`, `created_at`) VALUES
-(9, 1, 20, '2020-08-26 15:45:09'),
-(10, 11, 21, '2020-08-26 15:50:09'),
-(11, 18, 22, '2020-08-26 16:01:38'),
-(12, 14, 23, '2020-08-26 21:55:57'),
-(13, 52, 24, '2020-08-27 10:47:27');
+-- Historical order items are intentionally not seeded with the empty orders.
 
 -- --------------------------------------------------------
 

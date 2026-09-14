@@ -4,12 +4,12 @@
 
 EVVA brings telecom, internet, energy, smart-home and technology products together in one clear digital experience. The project includes a public website, customer onboarding, a product catalogue, authentication, orders and an administrator backoffice.
 
-[![Live demo](https://img.shields.io/badge/live_demo-EVVA-8f24e8)](https://evasive-skier-ended.ngrok-free.dev/home.php)
+[![Live demo](https://img.shields.io/badge/live_demo-EVVA-8f24e8)](https://web--evva--jvl8z8b74tt8.code.run/home.php)
 [![PHP](https://img.shields.io/badge/PHP-8.1-777bb4)](https://www.php.net/)
 [![MySQL](https://img.shields.io/badge/MySQL-8-4479a1)](https://www.mysql.com/)
 [![Docker](https://img.shields.io/badge/Docker-Compose-2496ed)](https://docs.docker.com/compose/)
 
-> The live demo uses a temporary ngrok tunnel and is available only while the local Docker environment is running.
+> The live demo is deployed on Northflank from the `main` branch using Docker. GitHub commits are deployed automatically through CI/CD.
 
 ## Product Story
 
